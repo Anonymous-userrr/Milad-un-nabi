@@ -1,0 +1,221 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Milad-un-Nabi ﷺ Greetings</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to bottom, #021d0f, #064420);
+      color: white;
+      text-align: center;
+      padding: 20px;
+      overflow-x: hidden;
+    }
+    header {
+      margin: 20px 0;
+      position: relative;
+    }
+    header h1 {
+      font-size: 2.5rem;
+      color: #ffdd57;
+      text-shadow: 0 0 15px #fff;
+      animation: fadeIn 3s ease-in-out;
+    }
+    .moon {
+      position: absolute;
+      top: -20px;
+      left: -60px;
+      font-size: 3rem;
+      animation: moveMoon 12s linear infinite;
+    }
+    @keyframes moveMoon {
+      0% { transform: translateX(0) translateY(0); }
+      50% { transform: translateX(90vw) translateY(20px); }
+      100% { transform: translateX(0) translateY(0); }
+    }
+    .card {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 20px;
+      margin: 15px auto;
+      border-radius: 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+      max-width: 650px;
+      animation: fadeUp 2s ease forwards;
+      overflow: hidden;
+    }
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    h2 {
+      color: #ffdd57;
+      margin-bottom: 10px;
+    }
+    button {
+      margin: 10px;
+      padding: 12px 25px;
+      border: 2px solid #ffdd57;
+      border-radius: 25px;
+      background: transparent;
+      color: #ffdd57;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      white-space: nowrap;
+    }
+    button:hover {
+      background: #ffdd57;
+      color: #064420;
+      transform: scale(1.05);
+    }
+    button:active {
+      transform: scale(0.95);
+    }
+    #daroodCount {
+      font-size: 1.2rem;
+      margin-top: 10px;
+    }
+    footer {
+      margin-top: 20px;
+      font-size: 0.9rem;
+      color: #eee;
+    }
+    /* Typing effect */
+    #sunnatBox {
+      background: rgba(0, 50, 0, 0.6);
+      border: 2px solid #00ff99;
+      border-radius: 15px;
+      padding: 15px;
+      text-align: left;
+      max-height: 250px;
+      overflow-y: auto;
+      line-height: 1.6;
+    }
+    .typing-line {
+      font-size: 1.1rem;
+      margin: 8px 0;
+      border-right: .15em solid #ffdd57;
+      white-space: normal;
+      overflow: hidden;
+      display: inline-block;
+      width: 100%;
+    }
+    .history-box {
+      background: rgba(0,0,0,0.5);
+      border: 2px solid #ffdd57;
+      border-radius: 15px;
+      padding: 15px;
+      margin-top: 20px;
+      text-align: left;
+      line-height: 1.6;
+      max-height: 250px;
+      overflow-y: auto;
+    }
+    .history-box h3 {
+      color: #ffdd57;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+    .history-box p {
+      margin: 10px 0;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="moon">🌙</div>
+    <h1 class="wish">✨ Eid Milad-un-Nabi ﷺ Mubarak ✨</h1>
+    <p>Let’s remember our beloved Prophet ﷺ and follow his Sunnah</p>
+  </header>  <section class="card">
+    <h2>Sunnat aur Paigham</h2>
+    <div id="sunnatBox"></div><div class="history-box">
+  <h3>Hamare Nabi ﷺ ki Duniya Mein Tashreef Aawri</h3>
+  <p>Duniya zulm aur andheron me dubi hui thi...</p>
+  <p>Log shirk karte the, jhoot aur fasad aam tha...</p>
+  <p>Aurat ko haq nahi milta tha, bacho ko zinda daba diya jata tha...</p>
+  <p>Insaaniyat ke naam ka koi ehtram nahi tha...</p>
+  <p>Phir hamare pyare Nabi ﷺ tashreef laaye...</p>
+  <p>Aap ﷺ ne zulm ko khatam kiya...</p>
+  <p>Aap ﷺ ne insaaf qayam kiya...</p>
+  <p>Aap ﷺ ne aurat ko izzat di, insaaniyat ko roshan kiya...</p>
+  <p>Duniya andheron se roshni ki taraf aayi...</p>
+  <p>Aap ﷺ rehmat-ul-lil-alameen banke tashreef laaye...</p>
+  <p>Aaj hum aapki rahmat aur sunnat ki roshni me jee rahe hain. ✨</p>
+</div>
+
+  </section>  <section class="card">
+    <h2>Darood Shareef Counter</h2>
+    <p>Hamare pyare Nabi ﷺ par 10 bar Darood padh kar bhejo:</p>
+    <button onclick="incrementDarood()">🤲 Darood Padh Liya</button>
+    <p id="daroodCount">Darood Count: 0 / 10</p>
+    <p id="daroodMessage"></p>
+  </section>  <section class="card">
+    <h2>Share Mubarak Greetings</h2>
+    <p>Spread the love of our Prophet ﷺ</p>
+    <p style="font-style:italic; color:#ffdd57;">Hamare Nabi ﷺ ne farmaya: "Jo meri Sunnat ko aage pahunchata hai, Allah uske chehre par noor ata karta hai."</p>
+    <button onclick="shareWhatsApp()">📲 Share on WhatsApp</button>
+  </section>  <footer>
+    <p>Created with ❤️ for Milad-un-Nabi ﷺ</p>
+  </footer>  <script>
+    let daroodCount = 0;
+    let sunnatMessages = [
+      "Muskurana bhi ek sadaqa hai 😊",
+      "Apne padosi se mohabbat aur madad karo 🤝",
+      "Safai imaan ka hissa hai 🕊️",
+      "Bachon se mohabbat aur buzurgon ka ehtram karo ❤️",
+      "Ilm hasil karna har Muslim par farz hai 📖",
+      "Aman aur shanti ka paigham dena 🌸",
+      "Sacchai aur imandari ko apnana 🕊️",
+      "Zaruratmand ki madad karna 🤲",
+      "Bimaar ki aayadat karna 💚",
+      "Har waqt Allah ka shukr ada karna ✨"
+    ];
+
+    let typingIndex = 0;
+    let charIndex = 0;
+    let currentLine;
+
+    function typeEffect() {
+      if (typingIndex < sunnatMessages.length) {
+        if (!currentLine) {
+          currentLine = document.createElement('div');
+          currentLine.className = 'typing-line';
+          document.getElementById('sunnatBox').appendChild(currentLine);
+        }
+
+        if (charIndex < sunnatMessages[typingIndex].length) {
+          currentLine.textContent += sunnatMessages[typingIndex].charAt(charIndex);
+          charIndex++;
+          setTimeout(typeEffect, 70);
+        } else {
+          currentLine.style.borderRight = 'none';
+          typingIndex++;
+          charIndex = 0;
+          currentLine = null;
+          setTimeout(typeEffect, 500);
+        }
+      }
+    }
+
+    window.onload = () => {
+      typeEffect();
+    }
+
+    function incrementDarood() {
+      daroodCount++;
+      document.getElementById('daroodCount').innerText = `Darood Count: ${daroodCount} / 10`;
+      if (daroodCount >= 10) {
+        document.getElementById('daroodMessage').innerText = "Mashallah! 🌸 Aapne 10 Darood bhej diye hain.";
+      }
+    }
+
+    function shareWhatsApp() {
+      let message = "🌙 Eid Milad-un-Nabi ﷺ Mubarak!\n\nFollow the Sunnah of our beloved Prophet ﷺ:\n- Muskurana bhi ek sadaqa hai\n- Padosi se mohabbat karo\n- Safai imaan ka hissa hai\n- Ilm hasil karna farz hai\n- Zaruratmand ki madad karo\n\nNabi ﷺ ne farmaya: 'Jo meri Sunnat ko share karta hai Allah pak uske chehre par noor ata karta hai.'\n\n🤲 Darood Shareef bhejna na bhoolen!";
+      let url = "https://wa.me/?text=" + encodeURIComponent(message);
+      window.open(url, '_blank');
+    }
+  </script></body>
+</html>
